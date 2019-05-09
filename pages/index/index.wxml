@@ -1,0 +1,130 @@
+<!--index.wxml-->
+<view >
+  <swiper class="card-swiper round-dot" indicator-dots="true" circular="true" autoplay="true" interval="5000" duration="500" bindchange="cardSwiper" indicator-color="#8799a3" indicator-active-color="#0081ff">
+    <swiper-item>
+      <image src='http://img4.imgtn.bdimg.com/it/u=4060831163,1678714341&fm=26&gp=0.jpg' class='swiper-item' mode='aspectfill'>
+      </image>
+    </swiper-item>
+    <swiper-item>
+      <image src='http://img1.imgtn.bdimg.com/it/u=2287726853,1509130100&fm=26&gp=0.jpg' class='swiper-item' mode='aspectfill'>
+      </image>
+    </swiper-item>
+    <swiper-item>
+      <image src='http://img4.imgtn.bdimg.com/it/u=2041874952,1858266970&fm=26&gp=0.jpg' class='swiper-item' mode='aspectfill'>
+      </image>
+    </swiper-item>
+    <swiper-item>
+      <image src='https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3135196895,258793338&fm=26&gp=0.jpg' class='swiper-item' mode='aspectfill'>
+      </image>
+    </swiper-item>
+  </swiper>
+</view>
+
+<view class="cu-bar search bg-white" >
+  <view class="search-form round">
+    <text class="icon-search"></text>
+    <input type="text" placeholder="搜索图片、文章、视频" bindinput='onInputText' confirm-type="search"></input>
+  </view>
+  <view class="action">
+    <button class="cu-btn bg-green shadow-blur round" bindtap='search'>搜索</button>
+  </view>
+</view>
+
+
+<view class="cu-list menu text-left solid-top  margin-top" >
+  <view class="cu-item ">
+    <view class="content">
+      <text class="text-grey ">分类</text>
+    </view>
+  </view>
+
+  <view class="cu-list grid col-3 bg-blue">
+
+    <view class="cu-item" bindtap='tiaozhuan' data-type='news'>
+      <text class="icon-news lg text-gray"></text>
+      <text>news</text>
+    </view>
+
+    <view class="cu-item" bindtap='tiaozhuan' data-type='video'>
+      <text class="icon-video lg text-gray"></text>
+      <text>video</text>
+    </view>
+    <view class="cu-item" bindtap='tiaozhuan' data-type='favor'>
+      <text class="icon-favor lg text-gray"></text>
+      <text>favor</text>
+    </view>
+
+  </view>
+</view>
+<view class="cu-bar bg-white solid-bottom margin-top" >
+  <view class="action">
+    <text class="icon-title text-orange"></text> 无人机新闻速递
+  </view>
+</view>
+
+<view class="cu-list menu-avatar">
+  <view class="cu-item" bindtap="nav"  wx:for="{{message}}" wx:if="{{index<3}}" data-nub='{{item.id}}' wx:key = "index" >
+    <view class="cu-avatar round lg" style="background-image:url({{item.imgUrl}});"></view>
+    <view class="content">
+      <view class="text-grey">"{{item.title}}"</view>
+      <view class="text-gray text-sm flex text-cut">
+      {{item.digest}}
+      </view>
+    </view>
+  </view>
+</view>
+
+
+<view class="cu-bar tabbar bg-white margin-top">
+  <view class="action" bindtap="NavChange" data-cur="basics" data-type=''>
+    <view class="icon-cu-image">
+      <image src="/pages/image/tabbar/basics{{PageCur=='basics'?'_cur':''}}.png"></image>
+    </view>
+    <view class="{{PageCur=='basics'?'text-green':'text-gray'}}">首页</view>
+  </view>
+  <view class="action" bindtap="NavChange" data-cur="component" data-type='jixing'>
+    <view class="icon-cu-image">
+      <image src="/pages/image/tabbar/component{{PageCur=='component'?'_cur':''}}.png"></image>
+    </view>
+    <view class="{{PageCur=='component'?'text-green':'text-gray'}}">机型</view>
+  </view>
+  <view class="action" bindtap="NavChange" data-cur="plugin" data-type='luntan'>
+    <view class="icon-cu-image">
+      <image src="/pages/image/tabbar/plugin{{PageCur=='plugin'?'_cur':''}}.png"></image>
+      <!-- <view class="cu-tag badge">99</view> -->
+    </view>
+    <view class="{{PageCur=='plugin'?'text-green':'text-gray'}}">发送新闻</view>
+  </view>
+  <view class="action" bindtap="NavChange" data-cur="about" data-type='mine'>
+    <view class="icon-cu-image">
+      <image src="/pages/image/tabbar/about{{PageCur=='about'?'_cur':''}}.png"></image>
+      <!-- <view class="cu-tag badge"></view> -->
+    </view>
+    <view class="{{PageCur=='about'?'text-green':'text-gray'}}">我的</view>
+  </view>
+</view>
+<!-- <view class="cu-bar bg-white solid-bottom margin-top">
+  <view class='action'>
+    <text class='icon-titles text-orange '></text> 文章类卡片
+  </view>
+  <view class='action'>
+    <switch class='sm' checked='{{isCard}}' bindchange='isCard'></switch>
+  </view>
+</view>
+<view class="cu-card article {{isCard?'no-card':''}}">
+  <view class="cu-item shadow">
+    <view class="title">
+      <view class="text-cut">无意者 烈火焚身;以正义的烈火拔出黑暗。我有自己的正义，见证至高的烈火吧。</view>
+    </view>
+    <view class="content">
+      <image src="https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg" mode="aspectFill"></image>
+      <view class="desc">
+        <view class="text-content"> 折磨生出苦难，苦难又会加剧折磨，凡间这无穷的循环，将有我来终结！真正的恩典因不完整而美丽，因情感而真诚，因脆弱而自由！</view>
+        <view>
+          <view class="cu-tag bg-red light sm round">正义天使</view>
+          <view class="cu-tag bg-green light sm round">史诗</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view> -->

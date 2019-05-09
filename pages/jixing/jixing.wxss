@@ -1,0 +1,33 @@
+/* pages/jixing/jixing.wxss */
+.lg2 {
+  width: 200rpx;
+  height: 200rpx;
+  font-size: 2em;
+}
+.b{
+  padding: 100rpx
+}
+.goods-item {
+  width: 100%;
+  display: flex;
+  padding: 5px;
+  flex-direction: column;
+  margin-left: 20rpx;
+  align-items: center;
+  justify-content: flex-start;
+  border-bottom: 1rpx solid #f2f2f2;
+}
+
+.goods-pic {
+  width: 80px;
+  height: 80px;
+  flex-shrink: 0;
+}
+
+.goods-info {
+  display: flex;
+  flex-direction: column;
+  padding: 0px 5px 0px 5px;
+  height: 80px;
+  justify-content: space-between;
+}

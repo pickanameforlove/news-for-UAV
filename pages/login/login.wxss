@@ -1,0 +1,19 @@
+.UCenter-bg {
+  background-color: lightgray;
+  background-size: cover;
+  height: 550rpx;
+  display: flex;
+  justify-content: center;
+  padding-top: 40rpx;
+  overflow: hidden;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+  font-weight: 300;
+  text-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+}
+.plex{
+  margin-left: 300rpx;
+  margin-top: 50rpx;
+}

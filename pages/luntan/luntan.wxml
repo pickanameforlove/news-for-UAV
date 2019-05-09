@@ -1,0 +1,23 @@
+<form>
+  <view class="cu-form-group top margin">
+    <view class="title">新闻标签</view>
+    <textarea  maxlength="-1" disabled="{{modalName!=null}}" placeholder-class="placeholder" class="{{textareaBValue?'value':''}}" bindinput="textareaBInput1"></textarea>
+  </view>
+  <view class="cu-form-group top margin">
+    <view class="title">新闻标题</view>
+    <textarea  maxlength="-1" disabledrpx="{{modalName!=null}}" placeholder-class="placeholder" class="{{textareaBValue?'value':''}}" bindinput="textareaBInput2"></textarea>
+  </view>
+  <view class="cu-form-group top margin">
+    <view class="title">新闻概要</view>
+    <textarea  maxlength="-1" disabled="{{modalName!=null}}" placeholder-class="placeholder" class="{{textareaBValue?'value':''}}" bindinput="textareaBInput3"></textarea>
+  </view>
+  <view class="cu-form-group top margin">
+    <view class="title">新闻内容</view>
+    <textarea  maxlength="-1" disabled="{{modalName!=null}}" placeholder-class="placeholder" class="{{textareaBValue?'value':''}}" bindinput="textareaBInput4"></textarea>
+  </view>
+  <view class="cu-form-group top margin">
+    <view class="title">图片链接</view>
+    <textarea  maxlength="-1" disabled="{{modalName!=null}}" placeholder-class="placeholder" class="{{textareaBValue?'value':''}}" bindinput="textareaBInput5"></textarea>
+  </view>
+  <button class="cu-btn bg-green shadow-blur round plex" style='left:300rpx' bindtap='sub'>提交</button>
+  </form>

@@ -1,0 +1,17 @@
+<view class="bg-white padding">
+  <view class="grid col-2 margin-bottom text-center">
+    <view wx:for="{{list}}" wx:key>
+      <view class='goods-item' bindtap="toDetailsTap" data-id="{{item.id}}">
+
+        <image class='goods-pic' mode='aspectFill' lazy-load="true" src="{{item.imgUrl}}"></image>
+
+        <view class='goods-info'>
+          <text>{{item.descri}}</text>
+          <text style='color:red;'>{{item.price}}</text>
+        </view>
+
+
+      </view>
+    </view>
+  </view>
+</view>

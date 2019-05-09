@@ -1,0 +1,5 @@
+  <view class="bg-white padding">
+    <view class="grid col-2 margin-bottom text-center">
+      <view class="bg-blue padding" wx:for="4" wx:key>{{index+1}}</view>
+    </view>
+  </view>

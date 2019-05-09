@@ -1,0 +1,80 @@
+<scroll-view scroll-y class="scrollPage">
+  <view class="UCenter-bg">
+    <image src="{{info.avatarUrl}}" class="png" mode="widthFix"></image>
+
+    <image src="https://image.weilanwl.com/gif/wave.gif" mode="scaleToFill" class="gif-wave"></image>
+  </view>
+  <view class="padding flex text-center text-grey bg-white shadow-warp">
+    <!-- <view class="flex flex-sub flex-direction solid-right">
+      <view class="text-xxl text-orange">{{visitTotal}}</view>
+      <view class="margin-top-sm">
+        <text class="icon-attentionfill"></text> View</view>
+    </view>
+    <view class="flex flex-sub flex-direction solid-right">
+      <view class="text-xxl text-blue">{{starCount}}</view>
+      <view class="margin-top-sm">
+        <text class="icon-favorfill"></text> Star</view>
+    </view>
+    <view class="flex flex-sub flex-direction">
+      <view class="text-xxl text-green">{{forksCount}}</view>
+      <view class="margin-top-sm">
+        <text class="icon-fork"></text> Fork</view>
+    </view> -->
+  </view>
+  <view class="cu-list menu card-menu margin-top-xl margin-bottom-xl shadow-lg radius">
+    <view class="cu-item arrow">
+      <view class="content" bindtap="CopyLink" data-link="https://github.com/weilanwl/ColorUI">
+        <text class="icon-github text-grey"></text>
+        <text class="text-grey">设置</text>
+      </view>
+    </view>
+
+    <view class="cu-item arrow">
+      <navigator class="content" url="/pages/about/log/log" hover-class="none">
+        <text class="icon-formfill text-green"></text>
+        <text class="text-grey">我的收藏</text>
+      </navigator>
+    </view>
+    <view class="cu-item arrow">
+      <view class="content" bindtap="showQrcode">
+        <text class="icon-appreciatefill text-red"></text>
+        <text class="text-grey">我的新闻</text>
+      </view>
+    </view>
+    <view class="cu-item arrow">
+      <button class="cu-btn content" open-type="feedback">
+        <text class="icon-writefill text-cyan"></text>
+        <text class="text-grey">意见反馈</text>
+      </button>
+    </view>
+  </view>
+  <view class="cu-tabbar-height"></view>
+  <view class="cu-bar tabbar bg-white margin-top">
+  <view class="action" bindtap="NavChange" data-cur="basics" data-type=''>
+    <view class="icon-cu-image">
+      <image src="/pages/image/tabbar/basics{{PageCur=='basics'?'_cur':''}}.png"></image>
+    </view>
+    <view class="{{PageCur=='basics'?'text-green':'text-gray'}}">首页</view>
+  </view>
+  <view class="action" bindtap="NavChange" data-cur="component" data-type='jixing'>
+    <view class="icon-cu-image">
+      <image src="/pages/image/tabbar/component{{PageCur=='component'?'_cur':''}}.png"></image>
+    </view>
+    <view class="{{PageCur=='component'?'text-green':'text-gray'}}">机型</view>
+  </view>
+  <view class="action" bindtap="NavChange" data-cur="plugin" data-type='luntan'>
+    <view class="icon-cu-image">
+      <image src="/pages/image/tabbar/plugin{{PageCur=='plugin'?'_cur':''}}.png"></image>
+      <!-- <view class="cu-tag badge">99</view> -->
+    </view>
+    <view class="{{PageCur=='plugin'?'text-green':'text-gray'}}">论坛</view>
+  </view>
+  <view class="action" bindtap="NavChange" data-cur="about" data-type='mine'>
+    <view class="icon-cu-image">
+      <image src="/pages/image/tabbar/about{{PageCur=='about'?'_cur':''}}.png"></image>
+      <!-- <view class="cu-tag badge"></view> -->
+    </view>
+    <view class="{{PageCur=='about'?'text-green':'text-gray'}}">我的</view>
+  </view>
+</view>
+</scroll-view>

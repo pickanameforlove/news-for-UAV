@@ -1,0 +1,25 @@
+<!--pages/video/video.wxml-->
+<view class="cu-card case">
+  <view class="cu-item shadow" wx:for="{{video}}">
+    <view class="image">
+      <video src="{{item.videoUrl}}"class='.margin-lr-xs-self'></video>
+      <view class="cu-bar bg-shadeBottom">
+        <text class="text-cut">{{item.descri}}</text>
+      </view>
+    </view>
+    <view class="cu-list menu-avatar">
+      <view class="cu-item">
+  
+        <view class="content flex-sub">
+            <view class="text-gray text-sm">
+             <view class="margin-lr-xs-self"> <text class="icon-attentionfill margin-lr-xs "></text> 10</view>
+              <view class="margin-lr-xs-self"><text class="icon-appreciatefill margin-lr-xs"></text> 20</view>
+              <view class="margin-lr-xs-self"><text class="icon-messagefill margin-lr-xs"></text> 30</view>
+            </view>
+         
+        </view>
+      </view>
+    </view>
+  </view>
+
+</view>

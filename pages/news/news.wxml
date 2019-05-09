@@ -1,0 +1,11 @@
+<view class="cu-list menu-avatar">
+  <view class="cu-item" bindtap="nav" data-nub='{{item.id}}' wx:for="{{message}}" wx:key="index" >
+    <view class="cu-avatar round lg-white" style="background-image:url({{item.imgUrl}});"></view>
+    <view class="content">
+      <view class="text-grey">{{item.title}}</view>
+      <view class="text-gray text-sm flex text-cut">
+      {{item.digest}}
+      </view>
+    </view>
+  </view>
+</view>

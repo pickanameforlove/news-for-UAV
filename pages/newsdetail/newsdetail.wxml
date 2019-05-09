@@ -1,0 +1,39 @@
+<import src="../../wxParse/wxParse.wxml" />
+
+<view class="solids-bottom padding-xs flex align-center">
+  <view class="flex-sub text-center">
+    <view class="solid-bottom text-xl padding bg-white">
+      <text class="text-black text-bold">{{title}}</text>
+    </view>
+    <view class="solid-bottom text-xl padding bg-white">
+      <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+    </view>
+  </view>
+</view>
+
+<view class="cu-list menu-avatar comment solids-top" wx:for="{{comments}}">
+  <view class="cu-item" >
+    <view class="cu-avatar round" style="background-image:url({{item.userImg}});"></view>
+    <view class="content">
+      <view class="text-grey">{{item.userNickname}}</view>
+      <view class="text-gray text-content text-df">
+        {{item.content}}
+      </view>
+      <view class="margin-top-sm flex justify-between">
+        <view class="text-gray text-df">2018年12月4日</view>
+      </view>
+    </view>
+  </view>
+</view>
+
+
+
+
+
+<view class="cu-bar foot input" style="bottom:0px">
+  <view class="action">
+    <text class="icon-search text-grey"></text>
+  </view>
+  <input class="solid-bottom" bindfocus="InputFocus" bindblur="InputBlur" adjust-position="{{false}}" focus="{{false}}" maxlength="300" cursor-spacing="10" bindinput='forContent'></input>
+  <button class="cu-btn bg-green shadow" bindtap="commentSubmit">发送</button>
+</view>
